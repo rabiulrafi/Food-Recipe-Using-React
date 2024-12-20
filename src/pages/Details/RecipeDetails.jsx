@@ -6,7 +6,7 @@ export const Details = () => {
 
   const { id } = useParams();
   console.log(id);
-  const { recipeDeatailsData, setRecipeDetailsData, HandleFavouriteItem, FavouriteList } = useContext(GlobalContex)
+  const { recipeDeatailsData, setRecipeDetailsData, HandleFavouriteItem, FavouriteList } = useContext(GlobalContex)  
   useEffect(() => {
     async function getRecipeDetails() {
       const response = await fetch(
@@ -22,6 +22,7 @@ export const Details = () => {
 
     getRecipeDetails();
   }, []);
+       
 
   return (
     <div className="container mx-auto py-10 grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -42,14 +43,14 @@ export const Details = () => {
         </h3>
         <div>
           <button
-            onClick={() => HandleFavouriteItem(recipeDeatailsData?.recipe)}
+            onClick={() => HandleFavouriteItem(recipeDeatailsData?.recipe)}  
             className="p-3 px-8 rounded-lg text-sm uppercase font-medium tracking-wider mt-3 inline-block shadow-md bg-black text-white"
           >
-            {FavouriteList && recipeDeatailsData?.recipe && FavouriteList.findIndex(item => item.id == recipeDeatailsData.recipe.id) !== -1 ? "Remove from favorites" : "Add to favoritese"}
+            {FavouriteList && recipeDeatailsData?.recipe && FavouriteList.findIndex(item => item.id == recipeDeatailsData.recipe.id) !== -1 ? "Remove from favorites" : "Add to favoritese"}                    
           </button>
         </div>
         <div>
-          <span className="text-2xl font-semibold text-black">
+          <span className="text-2xl font-semibold text-black">   
             Ingredients:
           </span>
           <ul className="flex flex-col gap-3">
