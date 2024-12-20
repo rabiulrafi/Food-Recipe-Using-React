@@ -2,6 +2,7 @@
   "name": "foodcore",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://rabiulrafi.github.io/Food-Recipe-Using-React/",
   "type": "module",
   "scripts": {
     "dev": "vite",
