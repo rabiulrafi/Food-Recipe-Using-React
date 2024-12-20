@@ -28,7 +28,7 @@ export const RecipeItem = ({ item }) => {
           >
             Recipe Details
           </NavLink>
-          <button onClick={() => HandleFavouriteItem(item)} className="focus:outline-none">
+          <button onClick={() => HandleFavouriteItem(item) } className="focus:outline-none">
             {isFavorite ? (
               <FaHeart className='text-red-500 text-2xl transition duration-300 transform hover:scale-125' />
             ) : (

@@ -21,3 +21,6 @@ export const Favourite = () => {
     </div>
   );
 }
+
+
+

@@ -15,18 +15,18 @@ export const GlobalState = ({ children }) => {
     const [FavouriteList, setFavouriteList] = useState([]);
 
     const HandleFavouriteItem = (content) => {
-        console.log(content,'recepi fac item');
+        console.log(content, 'recepi fac item');
         let copyFavoriteList = [...FavouriteList];
         const index = copyFavoriteList.findIndex(item => item.id == content.id)
         if (index === -1) {
             copyFavoriteList.push(content)
         }
         else {
-            copyFavoriteList.splice(index)
+            copyFavoriteList.splice(index, 1)
         }
         setFavouriteList(copyFavoriteList)
     }
-    
+
     console.log(FavouriteList, 'favoritesList');
 
     async function HandleSubmit(event) {
