@@ -17,7 +17,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route
-            path='/Food-Recipe-Using-React'
+            path='/'
             element={
               <Home />
             }
