@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { createContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 export const GlobalContex = createContext(null)
 
 
@@ -13,6 +14,7 @@ export const GlobalState = ({ children }) => {
     const [recipeList, setRecipeList] = useState([]);
     const [recipeDeatailsData, setRecipeDetailsData] = useState(null);
     const [FavouriteList, setFavouriteList] = useState([]);
+    const navigate=useNavigate();
 
     const HandleFavouriteItem = (content) => {
         console.log(content, 'recepi fac item');
@@ -40,6 +42,7 @@ export const GlobalState = ({ children }) => {
             }
             setLoading(false);
             setSearchParam("");
+            navigate('/');
 
         } catch (error) {
             console.log(error);

@@ -29,7 +29,7 @@ function App() {
               <Details />
             }
           />
-          <Route path="*" element={<ErrorPage />} />
+          {/* <Route path="*" element={<ErrorPage />} /> */}
         </Routes>
       </div>
 
